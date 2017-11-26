@@ -6,19 +6,30 @@
   <h3 v-show='teacher.show'>{{teacher.speciality}}</h3>
   </li>
 </ul>
+<button v-on:click='deleteTeacher'>Delete</button>
+
 </div>
 </template>
 
 <script>
 
 export default {
-props:['teachers'],
+props:{
+  teachers:{
+    type: Array,
+    required:true
+  }
+},
 data() {
   return {
 
   }
+},
+methods:{
+  deleteTeacher:function(){
+    this.teachers.pop();
+  }
 }
-
 }
 </script>
 <style scoped>

@@ -2,6 +2,9 @@
 <div>
   <app-header></app-header>
   <app-content v-bind:teachers='teachers'></app-content>
+  <hr>
+  <app-content v-bind:teachers='teachers'></app-content>
+
   <app-footer></app-footer>
 
 </div>
