@@ -12,16 +12,10 @@
 <script>
 
 export default {
-
+props:['teachers'],
 data() {
   return {
-  teachers: [
-    {name:'Mario', speciality:'Graphic', show:false},
-    {name:'Steve', speciality:'Data Structure', show:false},
-    {name:'Lewis', speciality:'Optimization', show:false},
-    {name:'George', speciality:'Operating System', show:false},
 
-  ]
   }
 }
 

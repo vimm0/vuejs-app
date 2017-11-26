@@ -1,7 +1,7 @@
 <template>
 <div>
   <app-header></app-header>
-  <app-content></app-content>
+  <app-content v-bind:teachers='teachers'></app-content>
   <app-footer></app-footer>
 
 </div>
@@ -20,6 +20,13 @@ components:{
 },
 data() {
   return {
+  teachers: [
+    {name:'Mario', speciality:'Graphic', show:false},
+    {name:'Steve', speciality:'Data Structure', show:false},
+    {name:'Lewis', speciality:'Optimization', show:false},
+    {name:'George', speciality:'Operating System', show:false},
+
+  ]
   }
 }
 
