@@ -29,6 +29,24 @@ methods:{
   deleteTeacher:function(){
     this.teachers.pop();
   }
+},
+beforeCreate(){
+  alert('before create');
+},
+created(){
+  alert('created');
+},
+beforeMount(){
+  alert('before mount');
+},
+mounted(){
+  alert('mounted');
+},
+beforeUpdate(){
+  alert('before updated');
+},
+updated(){
+  alert('updated');
 }
 }
 </script>
