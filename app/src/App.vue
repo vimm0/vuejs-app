@@ -1,38 +1,35 @@
 <template>
 <div>
-  <app-header v-bind:title='title' v-on:changeTitle='updateTitle($event)'></app-header>
-  <app-content v-bind:teachers='teachers'></app-content>
-  <app-footer v-bind:title='title'></app-footer>
+  <form-helper>
+  <div slot='form-header'>
+    <h5>Header</h5>
+  </div>
+  <div slot='form-fields'>
+<input type='text' placeholder='name' required />
+<input type='password' placeholder='password' required />
+  </div>
+  <div slot='form-controls'>
+    <button v-on:click='handleSubmit'>Submit</button>
+  </div>
 
+  </form-helper>
 </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Websikshalaya from './components/Websikshalaya.vue';
-import Footer from './components/Footer.vue';
+import formHelper from './components/formHelper.vue';
 
 export default {
 components:{
-  'app-header':Header,
-  'app-content':Websikshalaya,
-  'app-footer':Footer
+  'form-helper': formHelper
 },
 data() {
   return {
-  teachers: [
-    {name:'Mario', speciality:'Graphic', show:false},
-    {name:'Steve', speciality:'Data Structure', show:false},
-    {name:'Lewis', speciality:'Optimization', show:false},
-    {name:'George', speciality:'Operating System', show:false},
-  ],
-  title: 'Vue Teachers'
+    title:'I am dynamic title.'
   }
 },
 methods:{
-  updateTitle:function(updatedTitle){
-    this.title = updatedTitle;
-  }
+
 }
 
 }

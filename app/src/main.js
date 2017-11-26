@@ -32,7 +32,6 @@ import Vue from 'vue'
 // }).$mount('#app')
 // this.$emit('changeTitle','Vue Wiards')
 
-export const bus = new Vue({});
 new Vue({
   el:'#app',
   render: h => h(App)
