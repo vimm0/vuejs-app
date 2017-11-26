@@ -1,6 +1,6 @@
 <template>
 <div>
-  <app-header v-bind:title='title'></app-header>
+  <app-header v-bind:title='title' v-on:changeTitle='updateTitle($event)'></app-header>
   <app-content v-bind:teachers='teachers'></app-content>
   <app-footer v-bind:title='title'></app-footer>
 
@@ -27,6 +27,11 @@ data() {
     {name:'George', speciality:'Operating System', show:false},
   ],
   title: 'Vue Teachers'
+  }
+},
+methods:{
+  updateTitle:function(updatedTitle){
+    this.title = updatedTitle;
   }
 }
 
