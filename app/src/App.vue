@@ -2,22 +2,23 @@
   <div>
   Test
   <h1>{{ title }}</h1>
-  <p>{{greeting()}}</p>
+  <teacher></teacher>
   </div>
 </template>
 
 <script>
+import Webshikshalaya from './Webshikshalaya.vue'
+
 export default {
+components:{
+'teacher': Webshikshalaya
+},
 data() {
   return {
-  title: 'Hey, bro!!'
-  }
-},
-methods:{
-  greeting:function(){
-  return 'cowboy';
+  title: 'web shikshalaya'
   }
 }
+
 }
 </script>
 
