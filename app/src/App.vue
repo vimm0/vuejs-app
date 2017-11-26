@@ -1,29 +1,27 @@
 <template>
-  <div>
-  Test
-  <h1>{{ title }}</h1>
-  <teacher></teacher>
-  </div>
+<div>
+  <app-header></app-header>
+  <app-content></app-content>
+  <app-footer></app-footer>
+
+</div>
 </template>
 
 <script>
-import Webshikshalaya from './Webshikshalaya.vue'
+import Header from './components/Header.vue';
+import Websikshalaya from './components/Websikshalaya.vue';
+import Footer from './components/Footer.vue';
 
 export default {
 components:{
-'teacher': Webshikshalaya
+  'app-header':Header,
+  'app-content':Websikshalaya,
+  'app-footer':Footer
 },
 data() {
   return {
-  title: 'web shikshalaya'
   }
 }
 
 }
 </script>
-
-<style scoped>
-h1{
-  color:purple;
-}
-</style>

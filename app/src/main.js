@@ -31,9 +31,6 @@ import Vue from 'vue'
 // //  components: { App }
 // }).$mount('#app')
 
-// registering vue component globally
-// import Webshikshalaya from './Webshikshalaya.vue'
-// Vue.component('teacher', Webshikshalaya);
 
 new Vue({
   el:'#app',
