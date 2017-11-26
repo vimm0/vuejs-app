@@ -1,11 +1,8 @@
 <template>
 <div>
-  <app-header></app-header>
+  <app-header v-bind:title='title'></app-header>
   <app-content v-bind:teachers='teachers'></app-content>
-  <hr>
-  <app-content v-bind:teachers='teachers'></app-content>
-
-  <app-footer></app-footer>
+  <app-footer v-bind:title='title'></app-footer>
 
 </div>
 </template>
@@ -28,8 +25,8 @@ data() {
     {name:'Steve', speciality:'Data Structure', show:false},
     {name:'Lewis', speciality:'Optimization', show:false},
     {name:'George', speciality:'Operating System', show:false},
-
-  ]
+  ],
+  title: 'Vue Teachers'
   }
 }
 
